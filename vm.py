@@ -270,7 +270,7 @@ def trap_putsp():
 
 def trap_halt():
     global is_running
-    print('\nHALT')
+    print('HALT')
     is_running = 0
 
 
@@ -361,7 +361,7 @@ def read_image_file(file_name):
 
 def main():
     if len(sys.argv) < 2:
-        print('lc3 [image-file1]')
+        print('vm.py [image-file]')
         exit(2)
 
     file_path = sys.argv[1]

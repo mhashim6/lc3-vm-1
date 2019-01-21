@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Implementation of virtual machine for LC-3 assembly language in python
+"""
+
+__version__ = '1.1'
+
 import array
 import select
 import sys

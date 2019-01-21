@@ -65,6 +65,7 @@ class OP:
     NOT = 9  # bitwise not
     LDI = 10  # load indirect
     STI = 11  # store indirect
+    RET = 12  # jump
     JMP = 12  # jump
     RES = 13  # reserved (unused)
     LEA = 14  # load effective address
@@ -290,7 +291,7 @@ ops = {
     OP.AND: and_,
     OP.BR: br,
     OP.JMP: jmp,
-    # OP.RET: jmp,
+    OP.RET: jmp,
     OP.JSR: jsr,
     OP.LD: ld,
     OP.LDI: ldi,
@@ -361,7 +362,7 @@ def read_image_file(file_name):
 
 def main():
     if len(sys.argv) < 2:
-        print('vm.py [image-file]')
+        print('vm.py [obj-file]')
         exit(2)
 
     file_path = sys.argv[1]

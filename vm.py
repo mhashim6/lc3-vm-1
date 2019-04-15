@@ -251,7 +251,7 @@ def trap_out():
 def trap_in():
     sys.stdout.write("Enter a character: ")
     sys.stdout.flush()
-    reg[R.R0] = sys.stdout.read(1)
+    reg[R.R0] = ord(sys.stdin.read(1))
 
 
 def trap_puts():
